@@ -6,9 +6,9 @@ import torch.optim as optim
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import RobustScaler
 
-seed_val = 102303244
-alpha = 0.5 * (seed_val % 7)
-beta = 0.3 * (seed_val % 5 + 1)
+roll_no = 102303244
+alpha = 0.5 * (roll_no % 7)
+beta = 0.3 * (roll_no % 5 + 1)
 
 data = pd.read_csv("data.csv", encoding="latin1", low_memory=False)
 feature = data["no2"].dropna().values.reshape(-1, 1)
